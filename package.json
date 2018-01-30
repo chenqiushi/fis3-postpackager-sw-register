@@ -2,7 +2,7 @@
   "name": "fis3-postpackager-sw-register",
   "version": "0.0.1",
   "description": "service worker register plugin for fis3",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && babel src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
