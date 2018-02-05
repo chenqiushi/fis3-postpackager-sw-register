@@ -1,5 +1,5 @@
 /**
- * @file fis3-preprocessor-sw-register
+ * @file fis3-postpackager-sw-register
  * @author chenqiushi(qiushidev@gmail.com)
  */
 
