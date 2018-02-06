@@ -26,6 +26,6 @@
         script.type = 'text/javascript';
         script.async = true;
         script.src = '${publicPath}${fileName}?v=' + Date.now();
-        firstScript.parentNode.insertAfter(script, firstScript);
+        firstScript.parentNode.insertBefore(script, firstScript);
     };
 </script>
