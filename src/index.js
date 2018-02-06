@@ -73,6 +73,7 @@ module.exports = function (ret, pack, settings, opt) {
     let version = settings.version || getVersion();
     let publicPath = (settings.publicPath || '') + '/';
     let swPrefix = settings.swPrefix || '';
+    let fallbackFilePath = settings.fallbackFilePath || '';
 
     // 编译默认模板并增加版本号
     let con = fs.readFileSync(swRegisterFilePath, 'utf-8');
@@ -116,7 +117,9 @@ module.exports = function (ret, pack, settings, opt) {
 
             let swRegisterEntryFileContent = etpl.compile(swRegisterEntryFileTpl)({
                 publicPath,
-                fileName
+                fileName,
+                fallbackFilePath,
+                swPrefix: swPrefix || '/'
             });
 
             content = content.replace(/<\/body>/, `${swRegisterEntryFileContent}</body>`);
