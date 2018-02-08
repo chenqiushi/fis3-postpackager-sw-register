@@ -73,4 +73,4 @@ navigator.serviceWorker && navigator.serviceWorker.register('${swPrefix}/service
 
 ### fallbackFilePath
 
-可选，降级标志文件路径。插件将在入口文件以 `<script>` 形式插入，默认标志名称为 `window.SW_FALLBACK`，若改值为 `true`，则 sw-register.js 不会引入执行，注册的 service worker 会被 unregister
+可选，降级标志文件路径。插件将在入口文件以 `<script>` 形式插入，默认标志名称为 `window.SW_FALLBACK`，若该值为 `true`，则 sw-register.js 不会引入执行，注册的 service worker 会被 unregister
