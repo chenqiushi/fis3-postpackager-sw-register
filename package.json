@@ -1,6 +1,6 @@
 {
   "name": "fis3-postpackager-sw-register",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "service worker register plugin for fis3",
   "main": "dist/index.js",
   "scripts": {
