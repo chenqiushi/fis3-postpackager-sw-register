@@ -29,12 +29,14 @@
         }
 
         function importSwRegister() {
-            // 引入 sw-register.js
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.async = true;
-            script.src = '${publicPath}${fileName}?v=' + Date.now();
-            firstScript.parentNode.insertBefore(script, firstScript);
+            if (location.protocol === 'https:') {
+                // 引入 sw-register.js
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.async = true;
+                script.src = '${publicPath}${fileName}?v=' + Date.now();
+                firstScript.parentNode.insertBefore(script, firstScript);
+            }
         }
     };
 </script>
