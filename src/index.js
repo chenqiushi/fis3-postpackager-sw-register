@@ -69,7 +69,7 @@ module.exports = function (ret, pack, settings, opt) {
         swRegisterFilePath = path.resolve(__dirname, '../templates', 'sw-register.js');
     }
 
-    let fileName = path.basename(swRegisterFilePath);
+    let fileName = path.basename(swRegisterFilePath).replace(/\.js/g, ext => `_${Date.now()}${ext}`);
     let version = settings.version || getVersion();
     let publicPath = (settings.publicPath || '') + '/';
     let swPrefix = settings.swPrefix || '';
